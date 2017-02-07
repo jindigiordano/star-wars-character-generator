@@ -16,13 +16,9 @@
         <a href="/users">Browse Users</a>
         <a href="/characters">Browse Characters</a>
         <% if current_user %>
-          <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
-          <form action="/logout" method="post">
-            <input type="hidden" name="_method" value="delete" />
-            <input type="submit" class="sign-out-link" value="Sign Out" />
-          </form>
+          <%= link_to current_user.username, "/users/#{current_user.id}" %> | <%= link_to "Logout", '/logout' %>
         <% else %>
-          <a href="/login">Login</a>
+          <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/' %>
         <% end %>
       </nav>
 

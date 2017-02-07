@@ -1,7 +1,5 @@
 <h2>Create Account</h2>
 
-<%= render 'users/errors' %>
-
 <form method="post" action="/users">
   <div class="field">
     <label for="user_username">Username</label>
@@ -13,7 +11,11 @@
   </div>
   <div class="field">
     <label for="user_password">Password</label>
-    <input type="password" name="password" id="user_password" />
+    <input type="password" name="user[password]" id="user_password" />
+  </div>
+  <div class="field">
+    <label for="password_confirmation">Confirm Password</label>
+    <input type="password" name="user[password_confirmation]" id="password_confirmation" />
   </div>
   <div class="field">
     <input type="submit" value="Create New User"/>

@@ -72,19 +72,19 @@ class CharactersController < ApplicationController
 
 
     if @character.save
-      redirect "characters/#{@character.id}"
+      redirect_to "characters/#{@character.id}"
     else
-      erb :'characters/new'
+      redirect_to 'characters/new'
     end
   end
 
   # new
   def new
     if current_user
-      erb :'characters/new'
+      render 'characters/new'
     else
       #TODO show user a helpful error message
-      redirect 'characters'
+      redirect_to '/login'
     end
   end
 
@@ -92,9 +92,6 @@ class CharactersController < ApplicationController
   def show
     @character = Character.find(params[:id])
     @user = User.find(@character.user_id)
-
-
-    erb :'characters/show'
   end
 
   # destroy
