@@ -1,0 +1,18 @@
+<h2><%= @user.username %>'s Characters:</h2>
+<span class="email">Email: <%=@user.email %></span>
+<ul class="character-list">
+  <% @user.characters.each do |character| %>
+    <li>
+      <a href="/characters/<%= character.id %>"><%= character.name %></a>
+      <% if character.user == current_user %>
+        <%=  render '/characters/_character_controls', locals: {character: character} %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<% if current_user %>
+  <% if @user.id == current_user.id %>
+    <a href="/characters/new"><button>Create a New Character</button></a>
+  <% end %>
+<% end %>

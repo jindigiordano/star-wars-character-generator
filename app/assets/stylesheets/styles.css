@@ -1,0 +1,105 @@
+body {
+  background-image: url('../img/Executorbridge.jpg');
+  background-position: center;
+}
+
+#content {
+  width: 500px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+input, textarea {
+  display: block;
+  margin-bottom: 1em;
+  resize: none;
+}
+
+header {
+  padding: .5em 1em;
+  background-color: black;
+}
+header form, span form {
+  display: inline-block;
+}
+
+header a {
+  color: #eee;
+}
+
+a {
+  color: #333;
+}
+
+.sign-out-link, .delete-link {
+  display: inline-block;
+  border: none;
+  background: none;
+  color: #eee;
+  font-size: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.control-span {
+  font-size: 75%;
+}
+
+.errors li {
+  list-style: none;
+  color: red;
+}
+
+th, td {
+    padding: 10px 25px 10px 10px;
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+  background: #eee;
+}
+
+.attribute-details {
+  display: none;
+}
+
+.user-list li {
+  list-style: none;
+  margin-left: -25px;
+}
+
+.character-list {
+  list-style: none;
+  column-count: 1;
+  column-gap: 40px;
+  margin-left: -30px;
+}
+
+.character-list input[type="submit"]{
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+.character-list li {
+  height: 25px;
+  margin: 5px;
+}
+
+.white-font {
+  color: white;
+  display: inline;
+}
+
+.creator {
+  font-style: italic;
+  margin-top: 25px;
+  color: #777;
+}
