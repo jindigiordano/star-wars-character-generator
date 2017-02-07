@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :characters, only: [:index, :new, :create, :show, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
 
-  get "/login", to: "sessions#new"
-  delete "/logout", to: "sessions#destroy"
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
 
 end
