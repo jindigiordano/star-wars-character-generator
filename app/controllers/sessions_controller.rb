@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  include ApplicationHelper
 
   def create
     @params = params
