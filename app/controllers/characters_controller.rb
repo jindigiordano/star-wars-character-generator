@@ -37,7 +37,8 @@ class CharactersController < ApplicationController
     })
 
     if @character.save
-      redirect_to "characters"
+      @user = User.find(@character.user_id)
+      render action: "show"
     else
       redirect_to '/characters/new'
     end
