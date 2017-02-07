@@ -1,0 +1,79 @@
+<% planet = JSON.parse(Swapi.get_planet @character.homeplanet_id) %>
+
+
+<table>
+  <tr>
+    <th>
+      Rotation Period:
+    </th>
+    <td>
+      <%= planet["rotation_period"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Orbital Period:
+    </th>
+    <td>
+      <%= planet["orbital_period"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Diameter:
+    </th>
+    <td>
+      <%= planet["diameter"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Climate:
+    </th>
+    <td>
+      <%= planet["climate"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Gravity:
+    </th>
+    <td>
+      <%= planet["gravity"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Terrain:
+    </th>
+    <td>
+      <%= planet["terrain"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Surface Water:
+    </th>
+    <td>
+      <%= planet["surface_water"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Population:
+    </th>
+    <td>
+      <%= planet["population"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Wookieepedia:
+    </th>
+    <td>
+      <a href="http://starwars.wikia.com/wiki/<%= planet["name"] %>">
+        <%= planet["name"] %>
+      </a>
+    </td>
+  </tr>
+</table>

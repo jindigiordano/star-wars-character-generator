@@ -1,0 +1,79 @@
+<% species = JSON.parse(Swapi.get_species @character.species_id) %>
+
+
+<table>
+  <tr>
+    <th>
+      Classification:
+    </th>
+    <td>
+      <%= species["classification"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Designation:
+    </th>
+    <td>
+      <%= species["designation"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Average Height:
+    </th>
+    <td>
+      <%= species["average_height"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Skin Colors:
+    </th>
+    <td>
+      <%= species["skin_colors"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Hair Colors:
+    </th>
+    <td>
+      <%= species["hair_colors"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Eye Colors:
+    </th>
+    <td>
+      <%= species["eye_colors"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Average Lifespans:
+    </th>
+    <td>
+      <%= species["average_lifespan"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Language:
+    </th>
+    <td>
+      <%= species["language"] %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Wookieepedia:
+    </th>
+    <td>
+      <a href="http://starwars.wikia.com/wiki/<%= species["name"] %>">
+        <%= species["name"] %>
+      </a>
+    </td>
+  </tr>
+</table>
