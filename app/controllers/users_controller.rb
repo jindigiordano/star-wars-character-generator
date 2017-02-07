@@ -11,15 +11,15 @@ class UsersController < ApplicationController
     #   return erb :'users/new'
     # end
 
-    @user = User.new(params[:user])
-    @user.password = params[:password]
+    @user = User.new(user_params)
+    @user.password = user_params[:password]
 
     if @user.save
       login(@user)
-      redirect "users/#{@user.id}"
+      redirect_to "users/#{@user.id}"
     else
       # TODO Show the user a descriptive error message
-      erb :'users/_new'
+      redirect_to '/'
     end
   end
 
@@ -33,4 +33,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @characters = @user.characters
   end
+
+  private
+      def user_params
+        params.require(:user).permit!
+      end
+
+
 end
