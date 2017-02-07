@@ -5,7 +5,7 @@
     <li>
       <a href="/characters/<%= character.id %>"><%= character.name %></a>
       <% if character.user == current_user %>
-        <%=  render '/characters/_character_controls', locals: {character: character} %>
+        <%=  render partial: '/characters/character_controls', locals: {character: character} %>
       <% end %>
     </li>
   <% end %>
