@@ -9,7 +9,7 @@ class CharactersController < ApplicationController
   # new
   def new
     if current_user
-      render 'characters/new'
+      render action: "new"
     else
       #TODO show user a helpful error message
       redirect_to '/login'
@@ -40,7 +40,7 @@ class CharactersController < ApplicationController
       @user = User.find(@character.user_id)
       render action: "show"
     else
-      redirect_to '/characters/new'
+      render action: "new"
     end
   end
 
@@ -54,6 +54,7 @@ class CharactersController < ApplicationController
   def destroy
     @character = Character.find(params[:id])
     @character.destroy
-    redirect_to 'characters'
+
+    redirect_back fallback_location: index
   end
 end
