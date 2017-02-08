@@ -1,8 +1,5 @@
 <span class="control-span">
   <!-- <a href="<%= character.id %>">edit</a> | <a href="<%= character.id %>">delete</a> -->
-<form id="delete-character" method="POST" action="characters/<%= character.id %>">
-  <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="delete">
-</form>
+<%= link_to "Delete", "/characters/#{character.id}/delete" %>
 
 </span>
