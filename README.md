@@ -6,6 +6,7 @@
 ----
 > “Do. Or do not. There is no try.”
 
+[Star Wars Character Generator](https://star-wars-character-generator.herokuapp.com/)
 
 ----
 ##About
@@ -16,15 +17,6 @@ You know you want to try it...
 
 ----
 ## Usage
-*Only available on localhost at the moment! Deploying soon...*
-
-**How to clone this project to your computer...**
-
-1. Clone this repo to your local machine
-2. Start the rails server
-3. Navigate to localhost:3000 in browser
-
-**How to use the App**
 
 1. Create an account (must login to create characters! Can still browse while logged out)
 2. Click on Browse Characters to see a list of all characters created
