@@ -3,12 +3,11 @@
 
 **Generate a Randomized, Original Star Wars Character!**
 
-----
 > “Do. Or do not. There is no try.”
 
+## Live App on Heroku
 [Star Wars Character Generator](https://star-wars-character-generator.herokuapp.com/)
 
-----
 ##About
 Greetings, padawans!
 This app generates an original character from the Star Wars universe by randomizing species, homeplanets, and professions, and packaging them all together to create your very own character in the Star Wars universe! (Currently text-based stats only)
